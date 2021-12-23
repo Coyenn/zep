@@ -25,8 +25,6 @@ function askIfSure() {
 }
 
 function initialise() {
-    echo "Changing name in package.json"
-    sed -i "2s/.*/  \"name\": \"$PLUGINNAME\",/" package.json
     echo "Removing any old git repository"
     sudo rm -R .git
     echo "Creating a new git project"
@@ -37,6 +35,8 @@ function initialise() {
     echo "Installing node modules"
     docker-compose run yarn yarn
     cd ../
+    echo "Changing name in package.json"
+    sed -i "2s/.*/  \"name\": \"$PLUGINNAME\",/" package.json
     echo "Applying fixes"
     bash ./.fixes/apply-fixes.sh
 }
