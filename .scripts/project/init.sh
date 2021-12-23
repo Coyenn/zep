@@ -22,8 +22,9 @@ function askIfSure() {
 }
 
 function initialise() {
-    echo "Removing any old git repository"
+    echo "Removing any old git repository and README"
     sudo rm -R .git
+    rm README.md
     echo "Creating a new git project"
     git init .
     cd .docker || exit
@@ -36,6 +37,9 @@ function initialise() {
     sed -i "2s/.*/  \"name\": \"$PLUGINNAME\",/" package.json
     echo "Applying fixes"
     bash ./.fixes/apply-fixes.sh
+    echo "Configuring gitpod.yml to not init a new project on workspace open again"
+    rm .gitpod.yml
+    mv .gitpod-initialised.yml .gitpod.yml
 }
 
 if [ "$1" = "--skip-all" ]; then
