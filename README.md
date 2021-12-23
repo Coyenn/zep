@@ -1,8 +1,9 @@
-<img align="right" width="300" src="foreman.png" />
-
 # create-roblox-ts-plugin
 
 Easily create a plugin for [Roblox Studio](https://www.roblox.com/create) using [TypeScript](https://www.typescriptlang.org).
+
+[Open in GitPod](https://gitpod.io/#https://github.com/Coyenn/create-roblox-ts-plugin)
+(Initialising the workspace can take up to 5 minutes)
 
 ## Prerequisites
 
