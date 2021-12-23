@@ -19,6 +19,7 @@ RUN curl -s https://api.github.com/repos/Roblox/foreman/releases/latest \
 
 RUN unzip ./foreman.zip -d ./foreman && \
     chmod -R +x ./foreman && \
-    mv ./foreman /bin
+    mv ./foreman/foreman /bin && \
+    rm -R ./foreman*
 
 ENV PATH="/root/.foreman/bin:${PATH}"
