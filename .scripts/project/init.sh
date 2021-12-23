@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 🛑 Stop developing
+# 🆕 Initialize a new plugin
 
 cd "$(dirname "$0")"/../../ || exit
 PLUGINNAME="plugin"
@@ -10,7 +10,7 @@ function askForPluginName() {
 }
 
 function askIfSure() {
-    echo "Do you really want to init a new project? (y/N)"
+    echo "Do you really want to initialize a new plugin? (y/N)"
     read -rp "" REPLY
 
     if [[ $REPLY =~ ^[Yy]$ ]]
@@ -21,26 +21,20 @@ function askIfSure() {
     fi
 }
 
-function initialise() {
+function initialize() {
     echo "Removing any old git repository and README"
     sudo rm -R .git
     sudo rm -R .docs
     rm README.md
     echo "Creating a new git project"
     git init .
-    cd .docker || exit
-    echo "Building docker images"
-    docker-compose build
-    echo "Installing node modules"
-    docker-compose run yarn yarn
-    cd ../
+    echo "Installing dependencies"
+    ./project install
     echo "Changing name in package.json"
     sed -i "2s/.*/  \"name\": \"$PLUGINNAME\",/" package.json
-    echo "Applying fixes"
-    bash ./.fixes/apply-fixes.sh
     echo "Configuring gitpod.yml to not init a new project on workspace open again"
     sudo rm .gitpod.yml
-    mv .gitpod-initialised.yml .gitpod.yml
+    mv .gitpod-initialized.yml .gitpod.yml
 }
 
 if [ "$1" = "--skip-all" ]; then
@@ -49,4 +43,4 @@ else
     askIfSure
 fi
 
-initialise
+initialize

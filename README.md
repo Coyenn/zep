@@ -10,7 +10,7 @@ GitPod is the easiest choice for starting with development right away.
 <p align="center">
     <a href="https://gitpod.io/#https://github.com/Coyenn/create-roblox-ts-plugin">Open in GitPod</a>
     <br>
-    (Initialising the workspace can take up to 5 minutes)
+    (Initializing the workspace can take up to 5 minutes)
 </p>
 
 ## Wiki
