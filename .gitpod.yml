@@ -1,4 +1,4 @@
 # Commands to start on workspace startup
 tasks:
-  - before: ./project init
+  - before: ./project init --skip-all
     command: ./project up && ./project logs
