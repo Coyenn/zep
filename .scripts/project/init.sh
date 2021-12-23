@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # 🛑 Stop developing
-cd "$(dirname "$0")" || exit
-cd .. || exit
 
-set -e
-
+cd "$(dirname "$0")"/../../ || exit
 PLUGINNAME="plugin"
 
 function askForPluginName() {
@@ -29,7 +26,7 @@ function initialise() {
     sudo rm -R .git
     echo "Creating a new git project"
     git init .
-    cd .docker
+    cd .docker || exit
     echo "Building docker images"
     docker-compose build
     echo "Installing node modules"
