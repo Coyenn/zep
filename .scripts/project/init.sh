@@ -24,6 +24,7 @@ function askIfSure() {
 function initialise() {
     echo "Removing any old git repository and README"
     sudo rm -R .git
+    sudo rm -R .docs
     rm README.md
     echo "Creating a new git project"
     git init .
@@ -38,7 +39,7 @@ function initialise() {
     echo "Applying fixes"
     bash ./.fixes/apply-fixes.sh
     echo "Configuring gitpod.yml to not init a new project on workspace open again"
-    rm .gitpod.yml
+    sudo rm .gitpod.yml
     mv .gitpod-initialised.yml .gitpod.yml
 }
 
