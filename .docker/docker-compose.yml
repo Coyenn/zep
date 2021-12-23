@@ -1,0 +1,21 @@
+version: "3"
+services:
+  yarn:
+    image: yarn
+    build:
+      context: ./yarn
+    volumes:
+      - "../:/app"
+  luau:
+    image: luau
+    build:
+      context: ./luau
+    volumes:
+      - "../:/app"
+
+  foreman:
+    image: foreman
+    build:
+      context: ./foreman
+    volumes:
+      - "../:/app"
