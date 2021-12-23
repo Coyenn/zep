@@ -4,6 +4,8 @@ set -e
 cd "$(dirname "$0")"/../
 
 foreman install
-rojo build -o ./dist/plugin.rbxm
+rojo build -o ./plugin.rbxm
+rm -R ./out/*
+mv ./plugin.rbxm ./out
 
-echo "The rbxm file is located inside ./dist"
+echo "The rbxm file is located inside ./out"

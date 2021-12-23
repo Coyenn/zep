@@ -16,4 +16,10 @@ then
     sudo rm -R .git
     echo "Creating a new git project"
     git init .
+    echo "Installing node modules"
+    cd .docker && \
+    docker-compose run yarn yarn && \
+    cd ../
+    echo "Applying fixes"
+    bash ./.fixes/apply-fixes.sh
 fi
