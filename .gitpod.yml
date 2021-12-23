@@ -1,0 +1,4 @@
+# Commands to start on workspace startup
+tasks:
+  - before: ./project init
+    command: ./project up && ./project logs
