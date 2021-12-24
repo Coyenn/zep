@@ -10,7 +10,7 @@ Please make sure these tools are installed on your system before proceeding. Win
 
 ### Installation
 ```bash
-git clone https://github.com/Coyenn/create-roblox-ts-plugin.git
-cd create-roblox-ts-plugin
+git clone https://github.com/Coyenn/zep.git
+cd zep
 ./project init
 ```

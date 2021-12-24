@@ -15,3 +15,8 @@ for file in $(find . -name '*.lua'); do
 
     mv "$file" "$newFileName"
 done
+
+for file in $(find . -name '*.lua'); do
+    removedLineBreaks=$(cat "$file" | tr '\n' ' ')
+    echo "$removedLineBreaks" > "$file"
+done

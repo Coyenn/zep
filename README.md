@@ -1,17 +1,13 @@
-# create-roblox-ts-plugin
+# ⚡️Zep
 
-Easily create a plugin for [Roblox Studio](https://www.roblox.com/create) using [TypeScript](https://www.typescriptlang.org). Keep in mind that this boilerplate is still under heavy development and not considered stable. Things can change at any moment.
-
+Easy creation of plugins for [Roblox Studio](https://www.roblox.com/create) using [TypeScript](https://www.typescriptlang.org). Zep is still under heavy development and not considered stable. Things are subject to change at any time.
 
 ## Quick Start
 
 GitPod is the easiest choice for starting with development right away.
 
-<p align="center">
-    <a href="https://gitpod.io/#https://github.com/Coyenn/create-roblox-ts-plugin">Open in GitPod</a>
-    <br>
-    (Initializing the workspace can take up to 5 minutes)
-</p>
+<a href="https://gitpod.io/#https://github.com/Coyenn/zep">Open in GitPod →</a>
+(Initializing the workspace can take up to 5 minutes)
 
 ## Wiki
 Please refer to the wiki regarding general usage and installation
