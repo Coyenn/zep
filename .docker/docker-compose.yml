@@ -1,21 +1,8 @@
 version: "3"
 services:
-  yarn:
-    image: yarn
+  zep:
+    image: zep
     build:
-      context: ./yarn
-    volumes:
-      - "../:/app"
-  luau:
-    image: luau
-    build:
-      context: ./luau
-    volumes:
-      - "../:/app"
-
-  foreman:
-    image: foreman
-    build:
-      context: ./foreman
+      context: ./zep
     volumes:
       - "../:/app"

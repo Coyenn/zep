@@ -7,7 +7,7 @@ echo "Removing old build files"
 sudo rm -R ../out/*
 
 echo "Compiling files"
-docker-compose run yarn rbxtsc
+docker-compose run zep rbxtsc
 
 echo "Compressing files"
-docker-compose run luau bash .scripts/build.sh
+docker-compose run zep bash .scripts/build.sh

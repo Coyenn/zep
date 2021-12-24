@@ -3,4 +3,4 @@
 cd "$(dirname "$0")" || exit
 cd ../../.docker || exit
 
-docker-compose up -d
+docker-compose up -d --remove-orphans
