@@ -35,7 +35,7 @@ function initialize() {
     sudo rm -R .docs
     rm README.md
     echo "Creating a new git project"
-    git init .
+    git init . -b main
     echo "Installing dependencies"
     ./project install
     echo "Changing name in package.json"
