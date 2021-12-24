@@ -27,4 +27,5 @@ function executeCommand() {
     fi
 }
 
+bash .scripts/utility/check-requirements.sh
 executeCommand "$1" "${@:2}"

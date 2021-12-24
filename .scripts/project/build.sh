@@ -10,4 +10,4 @@ echo "Compiling files"
 docker-compose run zep rbxtsc
 
 echo "Compressing files"
-docker-compose run zep bash .scripts/build.sh
+docker-compose run zep bash .scripts/utility/build.sh

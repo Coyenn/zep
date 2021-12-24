@@ -4,8 +4,7 @@ Easy creation of plugins for [Roblox Studio](https://www.roblox.com/create) usin
 
 ## Quick Start
 
-GitPod is the easiest choice for starting with development right away.
-
+GitPod is the easiest choice for starting with development right away.<br>
 <a href="https://gitpod.io/#https://github.com/Coyenn/zep">Open in GitPod →</a>
 
 ## Wiki

@@ -4,4 +4,4 @@ set -e
 cd "$(dirname "$0")"
 cd ../../.docker
 
-docker-compose run zep bash .scripts/package.sh
+docker-compose run zep bash .scripts/utility/package.sh

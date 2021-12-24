@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 # 🆕 Initialize a new plugin
 
+set -e
+
 cd "$(dirname "$0")"/../../ || exit
 PLUGINNAME="plugin"
+
+function checkRequirements() {
+    echo "Checking requirements"
+    bash .scripts/utility/check-requirements.sh
+    echo "All requirements satisfied"
+}
 
 function askForPluginName() {
     echo "Which name should the plugin have?"
@@ -36,6 +44,8 @@ function initialize() {
     sudo rm .gitpod.yml
     mv .gitpod-initialized.yml .gitpod.yml
 }
+
+checkRequirements
 
 if [ "$1" = "--skip-all" ]; then
     echo "Skipping questions"
