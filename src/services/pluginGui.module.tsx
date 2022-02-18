@@ -3,13 +3,13 @@ import App from "../gui/components/App.module";
 import defaultConfig from "../config.module";
 
 export default class pluginGui {
-	mount;
+  mount;
 
-	constructor(mount: DockWidgetPluginGui) {
-		this.mount = mount;
-	}
+  constructor(mount: DockWidgetPluginGui) {
+    this.mount = mount;
+  }
 
-	load() {
-		Roact.mount(<App />, this.mount, defaultConfig.pluginName + "Gui");
-	}
+  load() {
+    Roact.mount(<App />, this.mount, defaultConfig.pluginName + "Gui");
+  }
 }

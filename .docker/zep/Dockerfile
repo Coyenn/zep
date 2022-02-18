@@ -1,4 +1,4 @@
-FROM node:latest
+FROM --platform=linux/amd64 node:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -36,5 +36,11 @@ ENV PATH="/root/.foreman/bin:${PATH}"
 
 # NPM, NodeJS and Yarn
 RUN yarn global add roblox-ts
+
+# Trunk (Linter and Formatter)
+RUN curl -LO https://trunk.io/releases/trunk && \
+    chmod +x trunk && \
+    ./trunk && \
+    mv trunk /usr/local/bin
 
 CMD [ "rbxtsc", "-w" ]

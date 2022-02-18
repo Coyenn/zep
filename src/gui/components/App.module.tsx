@@ -5,13 +5,13 @@ import TestPage from "../../gui/pages/testPage.module";
 import { Router } from "@rbxts/roact-router";
 
 export default class App extends Component {
-	render() {
-		return (
-			<Router>
-				<Navbar />
-				<IndexPage />
-				<TestPage />
-			</Router>
-		);
-	}
+  render() {
+    return (
+      <Router>
+        <Navbar />
+        <IndexPage />
+        <TestPage />
+      </Router>
+    );
+  }
 }
