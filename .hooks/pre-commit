@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+cd "$(dirname "$0")"/../.docker/
+
+# This is required somewhere in your script to accept user input from the keyboard.
+exec < /dev/tty
+docker-compose run zep trunk check --trigger=git-push

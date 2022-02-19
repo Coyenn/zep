@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "preinstall": "git config core.hooksPath .hooks",
     "build": "rbxtsc",
     "watch": "rbxtsc -w"
   },
