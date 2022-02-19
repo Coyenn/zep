@@ -1,10 +1,10 @@
-import Roact, { Component } from "@rbxts/roact";
+import Roact from "@rbxts/roact";
 import Navbar from "../../gui/components/Navbar.module";
 import IndexPage from "../pages/index.module";
 import TestPage from "../../gui/pages/testPage.module";
 import { Router } from "@rbxts/roact-router";
 
-export default class App extends Component {
+export default class App extends Roact.Component {
   render() {
     return (
       <Router>

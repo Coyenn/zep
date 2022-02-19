@@ -40,6 +40,7 @@ RUN yarn global add roblox-ts
 # Trunk (Linter and Formatter)
 RUN curl -LO https://trunk.io/releases/trunk && \
     chmod +x trunk && \
-    mv trunk /usr/local/bin
+    mv trunk /usr/local/bin/trunk && \
+    trunk check download
 
 CMD [ "rbxtsc", "-w" ]

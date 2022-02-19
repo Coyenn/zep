@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # 🏗 Build your plugin
+
 cd "$(dirname "$0")" || exit
 cd ../../.docker || exit
 
